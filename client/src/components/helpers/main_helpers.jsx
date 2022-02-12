@@ -16,7 +16,6 @@ export const getProducts = () => {
     .then((res) => console.log(res.data))
     .catch((err) => console.log(err.message));
 };
-<<<<<<< HEAD
 export const getProduct = async (product_id) => {
   try{
     let res =  await reqInstance.get(`${BASEURL}/products/${product_id}`)
@@ -30,18 +29,6 @@ export const getStyles = (product_id, callback) => {
     .then((res) => { callback(res.data.results); })
     .catch((err) => console.log(err.message));
 };
-=======
-export const getProduct = (product_id) => {
-  reqInstance.get(`${BASEURL}/products/${product_id}`)
-    .then((res) => { store.dispatch(product.actions.setProduct(res.data)); })
-    .catch((err) => console.log(err.message));
-};
-export const getStyles = (product_id) => {
-  reqInstance.get(`${BASEURL}/products/${product_id}/styles`)
-    .then((res) => { console.log(res.data); })
-    .catch((err) => console.log(err.message));
-};
->>>>>>> 13c5479 (updated getReviewsMetaData helper)
 export const getRelated = (product_id) => {
   reqInstance.get(`${BASEURL}/products/${product_id}/related`)
     .then((res) => { console.log(res.data); })
@@ -61,22 +48,11 @@ export const getReviews = (page, count, sort, product_id) => {
       },
     },
   )
-<<<<<<< HEAD
     .then((res) => console.log(res.data))
     .catch((err) => console.error(err));
 };
-export const getReviewsMetadata = (product_id, callback) => {
-=======
-  .then((res) => console.log(res.data))
-  .catch((err) => console.error(err));
-};
 
-<<<<<<< HEAD
-export const getReviewsMetadata = (product_id, setMetadata) => {
->>>>>>> 13c5479 (updated getReviewsMetaData helper)
-=======
 export const getReviewsMetadata = (product_id, callback) => {
->>>>>>> e39c380 (rendered ratings)
   reqInstance.get(
     `${BASEURL}/reviews/meta`,
     {
@@ -84,18 +60,8 @@ export const getReviewsMetadata = (product_id, callback) => {
       { product_id },
     },
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
     .then((res) => callback(res.data))
-    .catch((err) => err);
-=======
-    .then((res) => setMetadata(res.data))
     .catch((err) => console.error(err));
->>>>>>> 13c5479 (updated getReviewsMetaData helper)
-=======
-    .then((res) => callback(res.data))
-    .catch((err) => callback(err));
->>>>>>> e39c380 (rendered ratings)
 };
 export const addNewReview = (newReview) => {
   reqInstance.post(
