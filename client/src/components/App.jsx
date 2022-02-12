@@ -17,8 +17,11 @@ function App() {
 
   return (
     <div>
+      <h3>Product</h3>
       {/* hi we are loading */}
       {JSON.stringify(product)}
+      <h3>Reviews</h3>
+      <h4>Review Breakdown</h4>
       <ReviewBreakdown />
     </div>
   );
