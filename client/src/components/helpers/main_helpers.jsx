@@ -71,8 +71,12 @@ export const getReviewsMetadata = (product_id, callback) => {
   .catch((err) => console.error(err));
 };
 
+<<<<<<< HEAD
 export const getReviewsMetadata = (product_id, setMetadata) => {
 >>>>>>> 13c5479 (updated getReviewsMetaData helper)
+=======
+export const getReviewsMetadata = (product_id, callback) => {
+>>>>>>> e39c380 (rendered ratings)
   reqInstance.get(
     `${BASEURL}/reviews/meta`,
     {
@@ -81,12 +85,17 @@ export const getReviewsMetadata = (product_id, setMetadata) => {
     },
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
     .then((res) => callback(res.data))
     .catch((err) => err);
 =======
     .then((res) => setMetadata(res.data))
     .catch((err) => console.error(err));
 >>>>>>> 13c5479 (updated getReviewsMetaData helper)
+=======
+    .then((res) => callback(res.data))
+    .catch((err) => callback(err));
+>>>>>>> e39c380 (rendered ratings)
 };
 export const addNewReview = (newReview) => {
   reqInstance.post(
