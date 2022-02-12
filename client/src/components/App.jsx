@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchProductId} from '../redux/store.js'
-import Review from './reviews/Review.jsx';
+import ReviewBreakdown from './reviews/ReviewBreakdown.jsx';
 
 function App() {
   const { id } = useParams();
@@ -17,9 +17,11 @@ function App() {
 
   return (
     <div>
-      {/* <Overview/> */}
-      <Review/>
+      {/* hi we are loading */}
+      {JSON.stringify(product)}
+      <ReviewBreakdown />
     </div>
   );
 }
+
 export default App;
