@@ -36,7 +36,7 @@ Routing
 * Filter reviews by rating
 ![Screenshot](http://g.recordit.co/jIuF3ErQAt.gif)
 * Sort by relevant, newest, and helpful
-![Screenshot](http://g.recordit.co/WFocltvvfG.gif)
+![Screenshot](http://g.recordit.co/zTR8jKVpzD.gif)
 * Mark review as helpful, not helpful, and report and remove a review
 ![Screenshot](http://g.recordit.co/lIXMBueAlt.gif)
 
